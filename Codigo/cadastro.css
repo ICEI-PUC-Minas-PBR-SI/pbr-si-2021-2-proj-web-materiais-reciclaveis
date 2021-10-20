@@ -1,0 +1,12 @@
+#tituloHeader {
+    color: black;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+    color: #0cac1c;
+}
+
+.col {
+    padding: 10%;
+    padding-top: 15%;
+}

@@ -5,7 +5,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 ## Alunos integrantes da equipe
 
 * Hudson da Silva Carlos
-* Nome completo do aluno 2
+* Yuri Rafael Lana dos Santos
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 

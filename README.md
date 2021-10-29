@@ -6,7 +6,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * Hudson da Silva Carlos
 * Yuri Rafael Lana dos Santos
-* Nome completo do aluno 3
+* Rafael Henrique Pereira
 * Nome completo do aluno 4
 
 ## Professores responsáveis

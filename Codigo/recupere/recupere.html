@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Recupere sua Senha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./recupere.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <head>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">recicle.com</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Sobre nós</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Por quê reciclar</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Como reciclar</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Onde reciclar</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+                </div>
+            </div>
+        </nav>
+    </head>
+
+    <main>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <p id="slogan">A maior comunidade online de reciclagem</p>
+
+                </div>
+                <div class="col">
+                    <div class="caixaCadastro" id='caixaCadastro'>
+                        <h1>Recupere sua senha</h1>
+                        <hr>
+                        <form>
+                            <label for="email"><b>Email</b></label>
+                            <input id="inptEmail" type="text" placeholder="josedasilva@email.com" name="recEmail" required
+                                autocomplete="off">
+                                <label for="psw"><b>Nova senha</b></label>
+                                <input id="inptSenha" type="password" placeholder="******" name="psw" required>
+                                <button type="submit" class="signupbtn" id="btnCadastrar">Recuperar</button>
+                        </form>
+                        <hr>
+                        <hr>
+                        <p>Ainda não é cadastrado? <a href="cadastro.html" style="color:dodgerblue">Clique aqui</a>.</p>
+                        <p id="info">Enviaremos um e-mail ao endereço acima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script src="./recupere.js"></script>-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

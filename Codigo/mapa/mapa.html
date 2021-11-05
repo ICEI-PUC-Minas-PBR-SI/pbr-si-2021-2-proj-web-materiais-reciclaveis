@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="./Codigo/template_default/css/default.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
+        type="text/css">
+
+    <title>Pontos Verdes BH</title>
+
+    <style>
+        .ol-attribution.ol-logo-only,
+        .ol-attribution.ol-uncollapsible {
+            max-width: calc(100% - 3em) !important;
+            height: 1.5em !important;
+        }
+
+        .ol-control button,
+        .ol-attribution,
+        .ol-scale-line-inner {
+            font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif !important;
+        }
+
+        .ol-popup {
+            font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif !important;
+            font-size: 12px;
+            position: absolute;
+            background-color: white;
+            -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+            min-width: 100px;
+        }
+
+        .ol-popup:after,
+        .ol-popup:before {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .ol-popup:after {
+            border-top-color: white;
+            border-width: 10px;
+            left: 48px;
+            margin-left: -10px;
+        }
+
+        .ol-popup:before {
+            border-top-color: #cccccc;
+            border-width: 11px;
+            left: 48px;
+            margin-left: -11px;
+        }
+
+        .ol-popup-closer {
+            text-decoration: none;
+            position: absolute;
+            top: 2px;
+            right: 8px;
+        }
+
+        .ol-popup-closer:after {
+            content: "✖";
+            color: #c3c3c3;
+        }
+
+    </style>
+</head>
+
+<body>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid ">
+              <a class="navbar-brand" href="index.html">Recicle.com</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Sobre nós</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Por quê reciclar</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Como reciclar</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="#">Onde reciclar</a>
+                      </li>
+                  </ul>
+                  <div class="form-inline my-2 my-lg-0">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+    <script>
+
+        var attribution = new ol.control.Attribution({
+            collapsible: false
+        });
+
+        var map = new ol.Map({
+            controls: ol.control.defaults({ attribution: false }).extend([attribution]),
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM({
+                        url: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        maxZoom: 18
+                    })
+                })
+            ],
+            target: 'map',
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-43.94312758610575, -19.9229566634859]),
+                maxZoom: 18,
+                zoom: 12
+            })
+        });
+
+        projectTo = ol.proj.get();
+
+        var markers = [
+          [-43.9193767,-19.8559695, 'Ponto Verde São Gabriel'],
+          [-43.9154878,-19.8541049, 'Ponto Verde São Gabriel'],
+          [-44.0147193,-19.8666639, 'Ponto Verde Bandeirantes'],
+          [-43.9307541,-19.8775112, 'Ponto Verde Ipiranga'],
+          [-43.9524338,-19.8140869, 'Ponto Verde Parque São Pedro'],
+          [-43.9366246,-19.8574492, 'Ponto Verde Dona Clara']
+        ];
+
+        var saoGabriel = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-43.9193767,-19.8559695]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(saoGabriel);
+
+        var saoGabriel1 = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-43.9193767,-19.8541049]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(saoGabriel1);
+
+        var bandeirantes = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-44.0147193,-19.8666639]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(bandeirantes);
+
+        var ipiranga = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-43.9307541,-19.8775112]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(ipiranga);
+
+        var parqueSaoPedro = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-43.9524338,-19.8140869]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(parqueSaoPedro);
+
+        var donaClara = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-43.9366246,-19.8574492]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(donaClara);
+
+        var container = document.getElementById('popup');
+        var content = document.getElementById('popup-content');
+        var closer = document.getElementById('popup-closer');
+
+        var overlay = new ol.Overlay({
+            element: container,
+            autoPan: true,
+            autoPanAnimation: {
+                duration: 250
+            }
+        });
+        map.addOverlay(overlay);
+
+        closer.onclick = function () {
+            overlay.setPosition(undefined);
+            closer.blur();
+            return false;
+        };
+
+        map.on('singleclick', function (event) {
+            if (map.hasFeatureAtPixel(event.pixel) === true) {
+                var coordinate = event.coordinate;
+
+                content.innerHTML = '<b>Ponto Verde</b><br />Ponto Verde BH';
+                overlay.setPosition(coordinate);
+            } else {
+                overlay.setPosition(undefined);
+                closer.blur();
+            }
+        });
+    </script>
+
+    <hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <!-- <img src="https://avatars.githubusercontent.com/u/33984189?v=4" class="w-100" alt="Hudson Carlos"> -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Sobre nós</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Por quê reciclar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Como reciclar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Onde reciclar</a>
+                </li>
+            </ul>
+        </div>
+      <div class="row align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p>Conpyright 2021 - Recicle.com | Grupo de trabalhor TIAW PUC MINAS</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<hr>
+</body>
+
+</html>

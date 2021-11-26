@@ -1,108 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+  <link href="../template_default/css/default.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <title>Conecte-se</title>
 </head>
 
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">recicle.com</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Sobre nós</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Por quê reciclar</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Como reciclar</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Onde reciclar</a>
-        </li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>
+<body>  
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid ">
+              <a class="navbar-brand" href="../../index.html">Recicle.com</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="../sobreNos/index.html">Sobre nós</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="../porqueReciclar/index.html">Por quê reciclar</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="../comoReciclar/comoReciclar.html">Como reciclar</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="../mapa/mapa.html">Onde reciclar</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="conecte-se.html">Conecte-se</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="../quiz/index.html">Quiz</a>
+                      </li>
+                  </ul>                  
+                  <div class="form-inline my-2 my-lg-0">
+                      <a class="nav-link navbar-right" href="../login/login.html" role="button">Log in</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <main>
+    <p id="titulo">Conecte-se</p>
+    <div class="container">
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
+      <div class="row align-items-left">
+        <div class="row">
 
-  <p id="titulo">Conecte-se</p>
-  <div class="container">
-    <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
 
+        </div>
+        <div class="row">
+          <div class="caixaCadastro1" id='caixaCadastro'>
+            <h1 class="queroX">Quero receber material</h1>
+            <hr>
+            <form action="sucesso.html">
+            <input id="inptNome" type="text" placeholder="Nome" name="name" required>
+
+            <input id="inptEmail" type="text" placeholder="Email" name="email" required>
+
+            <input id="inptEndereco" type="text" placeholder="Rua/Número" name="text" required>
+
+            <input id="inptCep" type="text" placeholder="CEP" name="text" required>
+
+            <input id="inptCidade" type="text" placeholder="Cidade" name="text" required>
+
+            <input id="inptTelefone" type="tel" placeholder="Telefone de contato" name="number" pattern="[0-9]{11,14}" required>
+
+            <button type="submit" class="signupbtn" id="btnCadastrarReceber">Cadastrar</button>
+            </form>
+          </div>
+
+          <div class="caixaCadastro" id='caixaCadastro'>
+            <h1 class="queroX">Quero doar material</h1>
+            <hr>
+            <form action="sucesso.html">
+            <input id="inptNomeDoar" type="text" placeholder="Nome" name="name" required>
+
+            <input id="inptEmailDoar" type="email" placeholder="Email" name="email" required>
+
+            <input id="inptCidadeDoar" type="text" placeholder="Cidade" name="text" required>
+
+            <input id="inptTipoMaterialDoar" type="text" placeholder="Descreva o tipo de material a ser doado" name="message"
+              required>
+
+            <input id="inptTelefoneDoar" type="tel" placeholder="Telefone de contato" name="number" pattern="[0-9]{11,14}" required>
+            <button type="submit" class="signupbtn" id="btnCadastrarDoar">Cadastrar</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="row align-items-left">
+  </main>
+  
+  <hr>
+
+  <footer>
+    <div class="container">
       <div class="row">
-
-
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">                
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a class="nav-link" href="../sobreNos/index.html">Sobre nós</a></li>
+                  <li class="list-group-item"><a class="nav-link" href="../porqueReciclar/index.html">Por quê reciclar</a></li>
+                  <li class="list-group-item"><a class="nav-link" href="../comoReciclar/comoReciclar.html">Como reciclar</a></li>
+                  <li class="list-group-item"><a class="nav-link" href="../mapa/mapa.html">Onde reciclar</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a class="nav-link" href="conecte-se.html">Conect-se</a></li>
+                  <li class="list-group-item"><a class="nav-link" href="../quiz/index.html">Quiz</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a class="nav-link" href="../login/login.html">Log in</a></li>
+                  <li class="list-group-item"><a class="nav-link" href="../cadastro/cadastro.html">Cadastre-se</a></li>
+              </ul>
+          </div>
       </div>
-      <div class="row">
-        <div class="caixaCadastro1" id='caixaCadastro'>
-          <h1 class="queroX">Quero receber material</h1>
-          <hr>
-          <form action="sucesso.html">
-          <input id="inptNome" type="text" placeholder="Nome" name="name" required>
-
-          <input id="inptEmail" type="text" placeholder="Email" name="email" required>
-
-          <input id="inptEndereco" type="text" placeholder="Rua/Número" name="text" required>
-
-          <input id="inptCep" type="text" placeholder="CEP" name="text" required>
-
-          <input id="inptCidade" type="text" placeholder="Cidade" name="text" required>
-
-          <input id="inptTelefone" type="tel" placeholder="Telefone de contato" name="number" pattern="[0-9]{11,14}" required>
-
-          <button type="submit" class="signupbtn" id="btnCadastrarReceber">Cadastrar</button>
-          </form>
-        </div>
-
-        <div class="caixaCadastro" id='caixaCadastro'>
-          <h1 class="queroX">Quero doar material</h1>
-          <hr>
-          <form action="sucesso.html">
-          <input id="inptNomeDoar" type="text" placeholder="Nome" name="name" required>
-
-          <input id="inptEmailDoar" type="email" placeholder="Email" name="email" required>
-
-          <input id="inptCidadeDoar" type="text" placeholder="Cidade" name="text" required>
-
-          <input id="inptTipoMaterialDoar" type="text" placeholder="Descreva o tipo de material a ser doado" name="message"
-            required>
-
-          <input id="inptTelefoneDoar" type="tel" placeholder="Telefone de contato" name="number" pattern="[0-9]{11,14}" required>
-          <button type="submit" class="signupbtn" id="btnCadastrarDoar">Cadastrar</button>
-          </form>
-        </div>
+      <hr>
+      <div class="row align-items-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Conpyright 2021 - Recicle.com | Grupo de trabalhor TIAW PUC MINAS</p>
+          </div>
       </div>
     </div>
-  </div>
+  </footer>
+
+  <hr>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script src="../template_default/js/default.js"></script>
+
   <script src="index.js"></script>
 </body>
 

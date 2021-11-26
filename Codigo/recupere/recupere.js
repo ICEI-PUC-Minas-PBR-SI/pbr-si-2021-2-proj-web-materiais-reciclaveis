@@ -20,10 +20,12 @@ function resgataDados() {
     var teste = localStorage.getItem('email');
     var teste2 = document.getElementById('inptEmail').value;
     if (teste == teste2) {
+        window.alert("Senha atualizada com sucesso!");
         return {
             email: document.getElementById("inptEmail").value,
             senha: document.getElementById("inptSenha").value
         }
+        
     }
     else {
         window.alert("Email não consta no banco de dados.");
@@ -35,6 +37,6 @@ function salvaCadastro(dados) {
         localStorage.setItem("email", dados.email);
         localStorage.setItem("senha", dados.senha);
     } catch (erro) {
-        window.alert("Erro: " + erro);
+ 
     }
 }

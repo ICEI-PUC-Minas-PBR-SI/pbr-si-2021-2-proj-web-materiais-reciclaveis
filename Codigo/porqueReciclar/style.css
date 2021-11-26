@@ -14,7 +14,6 @@
 html {
   width: 100%;
   height: 100%;
-  
 }
 
 * {
@@ -30,7 +29,6 @@ html {
   flex-direction: row;
   justify-content: space-between;
 }
-
 
 
 .texto a {
@@ -49,8 +47,6 @@ html {
   margin-top: 40px;
 }
 
-
-
 /* MODAL VIDEOS YOUTUBE */
 #mdialog {
   max-width:75%;
@@ -60,8 +56,6 @@ html {
 #videoModal, #videoModal1 {
   border-radius: 50px;
 }
-
-
 
 .modal-body {
 position:relative;

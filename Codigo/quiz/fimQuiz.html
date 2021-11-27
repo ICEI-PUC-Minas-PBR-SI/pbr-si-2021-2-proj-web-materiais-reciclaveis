@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Parabéns!</title>
+        <link rel="stylesheet" href="quiz.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div id="end" class="flex-center flex-column">
+                <h1 id="finalScore"></h1>
+                <form>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Nome visitante"
+                    />
+                    <button 
+                        type="submit" 
+                        class="btn" 
+                        id="saveScoreBtn" 
+                        onclick="saveHighScore(event)"
+                        disabled
+                    >
+                        Salvar
+                    </button>
+                </form>
+                <a class="btn" href="index.html">Jogar</a>
+                <a class="btn" href="../../index.html">Sair</a>
+            </div>
+        </div>
+        <script src="fimQuiz.js"></script>
+    </body>
+</html>

@@ -16,35 +16,7 @@ let questions = [];
 
 fetch(
         "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
-        // {
-        //     "response_code":0,
-        //     "results":[
-        //        {
-        //           "category":"Reciclagem",
-        //           "type":"multiple",
-        //           "difficulty":"easy",
-        //           "question":"Dos materiais apresentados abaixo, qual não é reciclável?",
-        //           "correct_answer":"Seringas usadas",
-        //           "incorrect_answers":[
-        //              "Papel",
-        //              "Plástico",
-        //              "Metal"
-        //           ]
-        //        },
-        //        {
-        //           "category":"Reciclagem",
-        //           "type":"multiple",
-        //           "difficulty":"easy",
-        //           "question":"The programming language was created to replace what other programming language?",
-        //           "correct_answer":"Objective-C",
-        //           "incorrect_answers":[
-        //              "C#",
-        //              "Ruby",
-        //              "C++"
-        //           ]
-        //        }
-        //     ]
-        //  }
+      
     ) 
     .then(res => {        
 
@@ -117,7 +89,7 @@ fetch(
                   "type":"multiple",
                   "difficulty":"easy",
                   "question":"Qual a cor da lixeira de reciclagem para Orgânico?",
-                  "correct_answer":"Amazom",
+                  "correct_answer":"Amarrom",
                   "incorrect_answers":[
                      "Cinza",
                      "Vermelho",

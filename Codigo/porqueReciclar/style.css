@@ -84,7 +84,6 @@ padding:0px;
 }
 
 #video, #video1, #video2 {
-  margin-left: 80px;
   margin-top: 20px;
   margin-bottom: 65px;
   border-radius: 10px;
@@ -124,10 +123,11 @@ padding:0px;
   transform: scale(1.1, 1.1);
 }
 
-.conjuntoVideos {
+/* .conjuntoVideos {
   float: right;
   margin-right: 100px;
-}
+} */
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {

@@ -3,23 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
-    <link href="../porqueReciclar/style.css" rel="stylesheet">
-    <title>Por que reciclar?</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link href="../template_default/css/default.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Por que reciclar?</title>    
     <script>
-        $(document).ready(function () {
-          RodarYouTubeModal();
-          RodarYouTubeModal1();
-        });
-      </script>
+      $(document).ready(function () {
+        RodarYouTubeModal();
+        RodarYouTubeModal1();
+      });
+    </script>
+</head>
+<body>    
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid ">
-                <a class="navbar-brand" href="../../index.html">Recicle.com</a>
+                <a class="navbar-brand" href="../home/index.html">Recicle.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>        
@@ -51,144 +50,165 @@
             </div>
         </nav>
     </header>
+
     <main>
+      <div class="container">
         <p id="titulo">O porquê reciclar</p>
-  <div class="container">
-    <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="texto">
-      <p>Hoje em dia, com o aumento crescente na produção de resíduos e no lixo oceânico, a reciclagem é de extrema
-        importância. Muitos países já tem essa preocupação, apoiam programas ambientais e, consequentemente, de
-        reciclagem. </p>
-
-      <p> No Brasil, de acordo com a associação sem fins lucrativos Cempre (Compromisso Empresarial para Reciclagem), o
-        faturamento das cooperativas de catadores tem sido crescente nos últimos anos e houve ganhos de produtividade,
-        mas ainda há muito por fazer.</p>
-
-      <p> Um dos próximos passos para manter esse progresso é a formalização da atividade desempenhada pelos catadores.
-        Além disso, muitos municípios brasileiros ainda não contam com um serviço de coleta seletiva.</p>
-
-      <p> Apesar de conhecermos a importância da reciclagem, ainda são poucos os resíduos coletados e reciclados no
-        Brasil. Há uma defasagem de infraestrutura para coleta e processamento e faltam políticas públicas que
-        incentivem a logística reversa e a redução de embalagens desnecessárias por parte de empresas, por exemplo.</p>
-
-      <p> Mesmo que você saiba que um item pode ser reciclável (por conta das informações da embalagem), isso não
-        significa que ele será efetivamente reciclado. Portanto, é muito importante reduzir sua quantidade de resíduos.
-        A compostagem doméstica é essencial para isso, em termos de resíduos orgânicos.</p>
-
-      <p> Quanto aos recicláveis, a mudança de hábitos é fundamental. Sempre que puder, evite embalagens ou use produtos
-        com a embalagem reutilizada. Se não for possível, procure pelo menos por embalagens recicladas e/ou recicláveis.
-      </p>
-
-      <a target="_blank" href="https://www.ecycle.com.br/reciclagem/"> Fonte: Reciclagem: o que é e qual a importância?.
-        Equipe eCycle, 2021. Disponível em: www.ecycle.com.br/reciclagem.</a>
-    </div>
-  </div>
-  <div class="conjuntoVideos">
-    <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal"
-      data-tagVideo="https://www.youtube.com/embed/OQ5jpiKzNqg" data-bs-target="#videoModal" id="botaoVideos">O que é
-      reciclagem?</button>
-
-
-    <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="videoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" id="mdialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="titulovid">O que é reciclagem?</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span
-                aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <div class="ratio ratio-16x9">
-              <iframe class="embed-responsive-item" width="90%" height="700"
-                src="https://www.youtube.com/embed/OQ5jpiKzNqg" id="video" allowscriptaccess="always" allow="autoplay"
-                allowfullscreen></iframe>
+        <div class="container">
+          <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="texto">
+            <p>Hoje em dia, com o aumento crescente na produção de resíduos e no lixo oceânico, a reciclagem é de extrema
+              importância. Muitos países já tem essa preocupação, apoiam programas ambientais e, consequentemente, de
+              reciclagem. </p>
 
-    <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal"
-      data-tagVideo="https://www.youtube.com/embed/rNW_g-IYSOM" data-bs-target="#videoModal1" id="botaoVideos">Como
-      separar o lixo em casa</button>
+            <p> No Brasil, de acordo com a associação sem fins lucrativos Cempre (Compromisso Empresarial para Reciclagem), o
+              faturamento das cooperativas de catadores tem sido crescente nos últimos anos e houve ganhos de produtividade,
+              mas ainda há muito por fazer.</p>
 
+            <p> Um dos próximos passos para manter esse progresso é a formalização da atividade desempenhada pelos catadores.
+              Além disso, muitos municípios brasileiros ainda não contam com um serviço de coleta seletiva.</p>
 
-    <div class="modal fade" id="videoModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="videoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" id="mdialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="titulovid">Como separar o lixo em casa</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span
-                aria-hidden="true">&times;</span></button>
+            <p> Apesar de conhecermos a importância da reciclagem, ainda são poucos os resíduos coletados e reciclados no
+              Brasil. Há uma defasagem de infraestrutura para coleta e processamento e faltam políticas públicas que
+              incentivem a logística reversa e a redução de embalagens desnecessárias por parte de empresas, por exemplo.</p>
+
+            <p> Mesmo que você saiba que um item pode ser reciclável (por conta das informações da embalagem), isso não
+              significa que ele será efetivamente reciclado. Portanto, é muito importante reduzir sua quantidade de resíduos.
+              A compostagem doméstica é essencial para isso, em termos de resíduos orgânicos.</p>
+
+            <p> Quanto aos recicláveis, a mudança de hábitos é fundamental. Sempre que puder, evite embalagens ou use produtos
+              com a embalagem reutilizada. Se não for possível, procure pelo menos por embalagens recicladas e/ou recicláveis.
+            </p>
+
+            <a target="_blank" href="https://www.ecycle.com.br/reciclagem/"> Fonte: Reciclagem: o que é e qual a importância?.
+              Equipe eCycle, 2021. Disponível em: www.ecycle.com.br/reciclagem.</a>
           </div>
-          <div class="modal-body">
-            <div class="ratio ratio-16x9">
-              <iframe class="embed-responsive-item" width="90%" height="700"
-                src="https://www.youtube.com/embed/rNW_g-IYSOM" id="video1" allowscriptaccess="always" allow="autoplay"
-                allowfullscreen></iframe>
+        </div>
+        <div class="conjuntoVideos">
+          <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal"
+            data-tagVideo="https://www.youtube.com/embed/OQ5jpiKzNqg" data-bs-target="#videoModal" id="botaoVideos">O que é
+            reciclagem?</button>
+
+          <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen" id="mdialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="titulovid">O que é reciclagem?</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" width="90%" height="700" src="https://www.youtube.com/embed/OQ5jpiKzNqg" id="video" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal"
-      data-tagVideo="https://www.youtube.com/embed/ZcymnW5NRYQ" data-bs-target="#videoModal2" id="botaoVideos">Por Que a
-      Reciclagem é Tão Importante?</button>
+          <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/rNW_g-IYSOM" data-bs-target="#videoModal1" id="botaoVideos">Como separar o lixo em casa</button>
 
-
-    <div class="modal fade" id="videoModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="videoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen" id="mdialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="titulovid">Por que a Reciclagem é Tão Importante?</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span
-                aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <div class="ratio ratio-16x9">
-              <iframe class="embed-responsive-item" width="90%" height="700"
-                src="https://www.youtube.com/embed/ZcymnW5NRYQ" id="video2" allowscriptaccess="always" allow="autoplay"
-                allowfullscreen></iframe>
+          <div class="modal fade" id="videoModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen" id="mdialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="titulovid">Como separar o lixo em casa</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                      <iframe class="embed-responsive-item" width="90%" height="700" src="https://www.youtube.com/embed/rNW_g-IYSOM" id="video1" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-  </div>
 
+          <button class="btn btn-info mt-5 ml-5 video-btn" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/ZcymnW5NRYQ" data-bs-target="#videoModal2" id="botaoVideos">Por Que a Reciclagem é Tão Importante?</button>
+
+          <div class="modal fade" id="videoModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen" id="mdialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="titulovid">Por que a Reciclagem é Tão Importante?</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="botaoclose"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" width="90%" height="700" src="https://www.youtube.com/embed/ZcymnW5NRYQ" id="video2" allowscriptaccess="always" allow="autoplay" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+        </div>
+      </div>      
     </main>
+    
+    <hr>
 
+    <footer>
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">                
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="nav-link" href="../sobreNos/index.html">Sobre nós</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="../porqueReciclar/porque_reciclar.html">Por quê reciclar</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="../comoReciclar/comoReciclar.html">Como reciclar</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="../mapa/mapa.html">Onde reciclar</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="nav-link" href="../conecte-se/conecte-se.html">Conect-se</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="../quiz/index.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="nav-link" href="../login/login.html">Log in</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="../cadastro/cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Conpyright 2021 - Recicle.com | Grupo de trabalhor TIAW PUC MINAS</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+  
+    <hr>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="../template_default/js/default.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-    <script src="../porqueReciclar/index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

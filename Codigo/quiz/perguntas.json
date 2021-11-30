@@ -1,31 +1,86 @@
 [
-    {
-        "response_code":0,
-        "results":[
-           {
-              "category":"Reciclagem",
-              "type":"multiple",
-              "difficulty":"easy",
-              "question":"Dos materiais apresentados abaixo, qual não é reciclável?",
-              "correct_answer":"Seringas usadas",
-              "incorrect_answers":[
-                 "Papel",
-                 "Plástico",
-                 "Metal"
-              ]
-           },
-           {
-              "category":"Reciclagem",
-              "type":"multiple",
-              "difficulty":"easy",
-              "question":"The programming language was created to replace what other programming language?",
-              "correct_answer":"Objective-C",
-              "incorrect_answers":[
-                 "C#",
-                 "Ruby",
-                 "C++"
-              ]
-           }
-        ]
-     }
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Dos materiais apresentados abaixo, qual não é reciclável?",
+      "correct_answer":"Seringas usadas",
+      "incorrect_answers":[
+         "Papel",
+         "Plástico",
+         "Metal"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para papel?",
+      "correct_answer":"Azul",
+      "incorrect_answers":[
+         "Vermelho",
+         "Verde",
+         "Roxo"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para plastico?",
+      "correct_answer":"Vermelho",
+      "incorrect_answers":[
+         "Azul",
+         "Morrom",
+         "Preto"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para Vidro?",
+      "correct_answer":"Verde",
+      "incorrect_answers":[
+         "Amarelo",
+         "Cinza",
+         "Roza"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para Metal?",
+      "correct_answer":"Amarelo",
+      "incorrect_answers":[
+         "Azul",
+         "Laranja",
+         "Branco"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para Orgânico?",
+      "correct_answer":"Amarrom",
+      "incorrect_answers":[
+         "Cinza",
+         "Vermelho",
+         "Roxo"
+      ]
+   },
+   {
+      "category":"Reciclagem",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Qual a cor da lixeira de reciclagem para Não Reciclável?",
+      "correct_answer":"Cinza",
+      "incorrect_answers":[
+         "Vermelho",
+         "Verde",
+         "Roxo"
+      ]
+   }
 ]

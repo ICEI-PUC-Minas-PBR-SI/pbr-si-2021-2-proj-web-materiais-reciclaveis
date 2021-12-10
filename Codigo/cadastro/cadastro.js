@@ -2,8 +2,17 @@ var botaoCadastro = document.getElementById("btnCadastrar");
 botaoCadastro.addEventListener("click", main);
 
 function main() {
+    if (!localStorage.getItem("cadastros")) {
+        preencheLocalStorageVazio();
+    }
+    console.log(localStorage);
     const dadosCadastro = resgataDados();
     salvaCadastro(dadosCadastro);
+}
+
+function preencheLocalStorageVazio() {
+    let arrayCadastros = [];
+    localStorage.setItem("cadastros", JSON.stringify(arrayCadastros));
 }
 
 function resgataDados() {
@@ -15,11 +24,13 @@ function resgataDados() {
 }
 
 function salvaCadastro(dados) {
-    try {
-        localStorage.setItem("nomeCompleto", dados.nomeCompleto);
-        localStorage.setItem("email", dados.email);
-        localStorage.setItem("senha", dados.senha);
-    } catch (erro) {
-        window.alert("Erro: " + erro);
-    }
+    let cadastro = {
+        nomeCompleto: dados.nomeCompleto,
+        email: dados.email,
+        senha: dados.senha,
+    };
+    let cadastros = JSON.parse(localStorage.getItem("cadastros"));
+    cadastros.push(cadastro);
+    localStorage.setItem("cadastros", JSON.stringify(cadastros));
+    console.log(cadastros);
 }
